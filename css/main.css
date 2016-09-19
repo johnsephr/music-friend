@@ -1,0 +1,294 @@
+@font-face {
+  font-family: "avenir";
+  src: url("fonts/avenir/AvenirNextLTPro-Cn.otf"); }
+body {
+  font-family: 'avenir', condensed;
+  margin: 0; }
+
+.wrapper {
+  width: 1440px;
+  max-width: 90%;
+  margin: 0 auto; }
+
+.button, .button_small {
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  padding: 1rem 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center; }
+
+.button_highlight {
+  background: #01b2b9; }
+
+.button_secondary {
+  background: #6a6b6a; }
+
+.button_small {
+  padding: .75rem 2.5rem; }
+
+* {
+  box-sizing: border-box; }
+
+.cf:after,
+.cf:before {
+  content: " ";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+#banner {
+  background-image: url(../images/banner_background.jpg);
+  background-repeat: none;
+  background-size: cover;
+  background-position: center center; }
+  #banner header {
+    padding: 2rem 0; }
+  #banner #logo {
+    color: #ffffff;
+    font-weight: 100;
+    font-size: 1.35rem;
+    float: left;
+    margin: 0; }
+  #banner nav {
+    float: right; }
+    #banner nav a {
+      color: #bbb9ba;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-decoration: none; }
+  #banner .content {
+    padding: 2rem 0 10rem 0; }
+    #banner .content .title,
+    #banner .content .sub_title {
+      color: #ffffff;
+      text-align: center; }
+    #banner .content .title {
+      font-size: 4rem;
+      font-weight: 200;
+      margin: 0.5rem;
+      padding-top: 3rem; }
+    #banner .content .sub_title {
+      color: #bbb9ba;
+      font-weight: 100;
+      font-size: 1.5rem;
+      width: 550px;
+      margin: 0 auto 1.5rem auto;
+      line-height: 1.75;
+      padding-bottom: 14rem; }
+    #banner .content .button_wrapper {
+      text-align: center; }
+      #banner .content .button_wrapper .button, #banner .content .button_wrapper .button_small {
+        margin: 0 4rem; }
+
+#services {
+  background: #ebeef1;
+  padding: 2rem 0 2rem 0;
+  position: relative; }
+  #services #move-wrapper {
+    transition: transform 500ms ease; }
+  #services .service-wrap {
+    width: calc(100% / 3);
+    height: auto;
+    display: inline-block;
+    float: left;
+    padding: 0 1em; }
+    #services .service-wrap .service,
+    #services .service-wrap .producing,
+    #services .service-wrap .recording,
+    #services .service-wrap .service,
+    #services .service-wrap .producing,
+    #services .service-wrap .performing,
+    #services .service-wrap .service,
+    #services .service-wrap .producing {
+      border-radius: 4px;
+      background: #ffffff;
+      width: 100%;
+      padding: 3rem 2.5%;
+      text-align: center;
+      position: relative;
+      box-shadow: 0px 3px 57px 0px rgba(0, 0, 0, 0.25);
+      -webkit-box-shadow: 0px 3px 57px 0px rgba(0, 0, 0, 0.25);
+      -moz-box-shadow: 0px 3px 57px 0px rgba(0, 0, 0, 0.25); }
+      #services .service-wrap .service h3,
+      #services .service-wrap .producing h3,
+      #services .service-wrap .recording h3,
+      #services .service-wrap .service h3,
+      #services .service-wrap .producing h3,
+      #services .service-wrap .performing h3,
+      #services .service-wrap .service h3,
+      #services .service-wrap .producing h3 {
+        margin: 0 0 2rem 0;
+        font-size: 2.25rem;
+        color: #52585b; }
+      #services .service-wrap .service p,
+      #services .service-wrap .producing p,
+      #services .service-wrap .recording p,
+      #services .service-wrap .service p,
+      #services .service-wrap .producing p,
+      #services .service-wrap .performing p,
+      #services .service-wrap .service p,
+      #services .service-wrap .producing p {
+        margin: 0 0 2.5rem 0;
+        color: #79888f; }
+      #services .service-wrap .service:before,
+      #services .service-wrap .producing:before,
+      #services .service-wrap .recording:before,
+      #services .service-wrap .service:before,
+      #services .service-wrap .producing:before,
+      #services .service-wrap .performing:before,
+      #services .service-wrap .service:before,
+      #services .service-wrap .producing:before {
+        content: " ";
+        position: absolute;
+        left: 50%;
+        bottom: -52px;
+        height: 52px;
+        border-left: 2px solid #8c8c8e; }
+    #services .service-wrap:after {
+      content: " ";
+      position: absolute;
+      left: 49.7%;
+      bottom: -52px;
+      border-top: 2px solid #8c8c8e;
+      width: 66.66666666%;
+      margin-left: -33%; }
+  #services:before {
+    content: " ";
+    position: absolute;
+    left: 50%;
+    bottom: 1px;
+    height: 102px;
+    border-left: 2px solid #8c8c8e; }
+
+#past_work {
+  background: #52585b;
+  padding: 3rem 0 0 0;
+  position: relative; }
+  #past_work .wrapper {
+    position: relative; }
+    #past_work .wrapper h2 {
+      text-align: center;
+      color: #ffffff; }
+    #past_work .wrapper .artist_names {
+      padding-top: 2rem; }
+      #past_work .wrapper .artist_names ul {
+        text-align: center;
+        -webkit-padding-start: 0; }
+        #past_work .wrapper .artist_names ul li {
+          display: inline;
+          padding: 0 3em; }
+          #past_work .wrapper .artist_names ul li a {
+            text-decoration: none;
+            color: #B2AEAE;
+            transition: color .3s ease-in-out; }
+          #past_work .wrapper .artist_names ul li a:hover {
+            color: #01b2b9; }
+        #past_work .wrapper .artist_names ul .current {
+          color: #01b2b9; }
+    #past_work .wrapper .selector_buttons {
+      margin-top: -1.3em;
+      position: relative;
+      width: 100%;
+      height: 7em; }
+  #past_work #slider_buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    padding: 2rem;
+    margin: 0; }
+    #past_work #slider_buttons a {
+      text-decoration: none; }
+    #past_work #slider_buttons li {
+      width: 9px;
+      height: 9px;
+      margin: 0 .5rem;
+      position: relative;
+      border-radius: 100%;
+      display: inline-block;
+      background-color: #ebeef1;
+      transition: background .3s ease-in-out; }
+      #past_work #slider_buttons li:hover {
+        background: #01b2b9; }
+    #past_work #slider_buttons .current {
+      background-color: #01b2b9; }
+  #past_work .card, #past_work .card-middle-left, #past_work .card-middle-right, #past_work .card-left, #past_work .card-right {
+    position: absolute;
+    display: inline-block;
+    width: 45%;
+    height: 45%;
+    background-image: url(../images/maroon_5-01.jpg);
+    background-position: center center;
+    background-size: cover;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    box-shadow: 0px 3px 57px 0px rgba(0, 0, 0, 0.2);
+    webkit-box-shadow: 0px 3px 57px 0px rgba(0, 0, 0, 0.2);
+    moz-box-shadow: 0px 3px 57px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1000; }
+  #past_work .card-middle-left, #past_work .card-middle-right {
+    z-index: 1;
+    width: 42%;
+    height: 50%;
+    left: 10%;
+    bottom: 0;
+    background-image: url(../images/john_mayer-01.jpg); }
+  #past_work .card-middle-right {
+    left: auto;
+    right: 10%;
+    bottom: 0;
+    background-image: url(../images/linkin_park-01.jpg); }
+  #past_work .card-left, #past_work .card-right {
+    z-index: 0;
+    left: 0;
+    bottom: 0;
+    height: 40%;
+    width: 40%;
+    background-image: url(../images/eminem-01.jpg); }
+  #past_work .card-right {
+    left: auto;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    background-image: url(../images/the_fray-01.jpg); }
+  #past_work .center {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%); }
+
+#contact {
+  background: #ebeef1;
+  padding-bottom: 5rem; }
+  #contact .wrapper {
+    padding: 3rem 0 0 0; }
+    #contact .wrapper h2 {
+      color: #52585b;
+      text-align: center; }
+    #contact .wrapper p {
+      text-align: center; }
+    #contact .wrapper a {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 13rem;
+      height: 3.25rem;
+      display: block;
+      position: relative;
+      margin-top: 2rem; }
+
+footer {
+  background-color: #ffffff; }
+  footer p {
+    text-align: center; }
+    footer p a {
+      color: #01b2b9;
+      text-decoration: none; }
+    footer p a:hover {
+      color: #00777C; }
+
+/*# sourceMappingURL=main.css.map */

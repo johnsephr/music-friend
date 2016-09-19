@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "avenir";
+  src: url("fonts/avenir/AvenirNextLTPro-Cn.otf"); }
+.body {
+  font-family: 'avenir', ultra light; }
+
+.wrapper {
+  width: 1440px;
+  max-width: 90%;
+  margin: 0 auto; }
+
+.button, .button_small {
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  padding: 1rem 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center; }
+
+.button_highlight {
+  background: #01b2b9; }
+
+.button_secondary {
+  background: #6a6b6a; }
+
+.button_small {
+  padding: .75rem 2.5rem; }
+
+* {
+  box-sizing: border-box; }
+
+.cf:after,
+.cf:before {
+  content: " ";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+#banner {
+  background-image: url(../images/banner_background.jpg);
+  background-repeat: none;
+  background-size: cover;
+  background-position: center center; }
+  #banner header {
+    padding: 2rem 0; }
+  #banner #logo {
+    color: #ffffff;
+    font-weight: 100;
+    font-size: 1.35rem;
+    float: left;
+    margin: 0; }
+  #banner nav {
+    float: right; }
+    #banner nav a {
+      color: #bbb9ba;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-decoration: none; }
+  #banner .content {
+    padding: 2rem 0 10rem 0; }
+    #banner .content .title, #banner .content .sub_title {
+      color: #ffffff;
+      text-align: center; }
+    #banner .content .title {
+      font-size: 4rem;
+      font-weight: 200;
+      margin: 0.5rem;
+      padding-top: 3rem; }
+    #banner .content .sub_title {
+      font-family: 'avenir', ultra light;
+      color: #bbb9ba;
+      font-weight: 100;
+      font-size: 1.5rem;
+      width: 550px;
+      margin: 0 auto 1.5rem auto;
+      line-height: 1.75;
+      padding-bottom: 14rem; }
+    #banner .content .button_wrapper {
+      text-align: center; }
+      #banner .content .button_wrapper .button, #banner .content .button_wrapper .button_small {
+        margin: 0 4rem; }
+
+#services {
+  background: #ebeef1;
+  padding: 2rem 0 6.5rem 0;
+  position: relative; }
+  #services .service {
+    background: #ffffff;
+    width: 31%;
+    float: left;
+    margin: -5rem 1% 0 1%;
+    padding: 3rem 2.5%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 3px 57px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 3px 57px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 3px 57px 0px rgba(0, 0, 0, 0.25); }
+    #services .service h3 {
+      margin: 0 0 2rem 0;
+      font-size: 2.25rem;
+      color: #52585b; }
+    #services .service p {
+      margin: 0 0 2.5rem 0;
+      color: #79888f; }
+
+/*# sourceMappingURL=main.css.map */

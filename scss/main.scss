@@ -1,0 +1,378 @@
+    // - - - - - - - mixins - - - - - - - //
+    @mixin centerer($position:absolute) {
+        position: $position;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @mixin v-center($position:relative) {
+        position: $position;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    @mixin h-center($position:relative) {
+        position: $position;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @mixin bottom($position:relative) {
+        position: $position;
+        top: 100%;
+        transform: translateY(-105%);
+    }
+
+    @mixin inline($float:left) {
+        display: inline-block;
+        float: $float;
+        position: relative;
+    }
+
+    // - - - - - - - variables - - - - - - - //
+    $white: #ffffff;
+    $highlight_button: #01b2b9;
+    $ltGrey_background: #ebeef1;
+    $ltGrey_callout: #79888f;
+    $grey_banner: #484e51;
+    $dkGrey_one: #52585b;
+    $ltGrey_one: #e2dcdc;
+    $dkGrey_two: #bbb9ba;
+    // - - - - - - - fonts - - - - - - - //
+    @font-face {
+        font-family: "avenir";
+        src: url("fonts/avenir/AvenirNextLTPro-Cn.otf");
+    }
+
+    // - - - - - - - global styles - - - - - - - //
+    body {
+        font-family: 'avenir', condensed;
+        margin: 0;
+    }
+
+    .wrapper {
+        width: 1440px;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .button {
+        border: none;
+        outline: none;
+        border-radius: 2rem;
+        padding: 1rem 3.5rem;
+        font-weight: 700;
+        color: $white;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .button_highlight {
+        background: $highlight_button;
+    }
+
+    .button_secondary {
+        background: #6a6b6a;
+    }
+
+    .button_small {
+        @extend .button;
+        padding: .75rem 2.5rem;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .cf:after,
+    .cf:before {
+        content: " ";
+        display: table;
+    }
+
+    .cf:after {
+        clear: both;
+    }
+
+    // - - - - - - - banner styles - - - - - - - //
+    #banner {
+        background-image: url(../images/banner_background.jpg);
+        background-repeat: none;
+        background-size: cover;
+        background-position: center center;
+        header {
+            padding: 2rem 0;
+        }
+        #logo {
+            color: $white;
+            font-weight: 100;
+            font-size: 1.35rem;
+            float: left;
+            margin: 0;
+        }
+        nav {
+            float: right;
+            a {
+                color: $dkGrey_two;
+                font-size: 1.25rem;
+                font-weight: 700;
+                text-decoration: none;
+            }
+        }
+        .content {
+            padding: 2rem 0 10rem 0;
+            .title,
+            .sub_title {
+                color: $white;
+                text-align: center;
+            }
+            .title {
+                font-size: 4rem;
+                font-weight: 200;
+                margin: 0.5rem;
+                padding-top: 3rem;
+            }
+            .sub_title {
+                color: $dkGrey_two;
+                font-weight: 100;
+                font-size: 1.5rem;
+                width: 550px;
+                margin: 0 auto 1.5rem auto;
+                line-height: 1.75;
+                padding-bottom: 14rem;
+            }
+            .button_wrapper {
+                text-align: center;
+                .button {
+                    margin: 0 4rem;
+                }
+            }
+        }
+    }
+
+    #services {
+        background: $ltGrey_background;
+        padding: 2rem 0 2rem 0;
+        position: relative;
+        #move-wrapper {
+            transition: transform 500ms ease;
+        }
+        .service-wrap {
+            width: calc(100% / 3);
+            height: auto;
+            display: inline-block;
+            float: left;
+            padding: 0 1em;
+            .service,
+            .recording,
+            .performing {
+                border-radius: 4px;
+                background: $white;
+                width: 100%;
+                padding: 3rem 2.5%;
+                text-align: center;
+                position: relative;
+                box-shadow: 0px 3px 57px 0px rgba(0, 0, 0, 0.25);
+                -webkit-box-shadow: 0px 3px 57px 0px rgba(0, 0, 0, 0.25);
+                -moz-box-shadow: 0px 3px 57px 0px rgba(0, 0, 0, 0.25);
+                h3 {
+                    margin: 0 0 2rem 0;
+                    font-size: 2.25rem;
+                    color: $dkGrey_one;
+                }
+                p {
+                    margin: 0 0 2.5rem 0;
+                    color: $ltGrey_callout;
+                }
+                &:before {
+                    content: " ";
+                    position: absolute;
+                    left: 50%;
+                    bottom: -52px;
+                    height: 52px;
+                    border-left: 2px solid #8c8c8e;
+                }
+            }
+            .service,
+            .producing {
+                @extend .service;
+                @extend .recording;
+                @extend .performing;
+            }
+            &:after {
+                content: " ";
+                position: absolute;
+                left: 49.7%;
+                bottom: -52px;
+                border-top: 2px solid #8c8c8e;
+                width: 66.66666666%;
+                margin-left: -33%;
+            }
+        }
+        &:before {
+            content: " ";
+            position: absolute;
+            left: 50%;
+            bottom: 1px;
+            height: 102px;
+            border-left: 2px solid #8c8c8e;
+        }
+    }
+
+    #past_work {
+        background: $dkGrey_one;
+        padding: 3rem 0 0 0;
+        position: relative;
+        .wrapper {
+            position: relative;
+            h2 {
+                text-align: center;
+                color: $white;
+            }
+            .artist_names {
+                padding-top: 2rem;
+                ul {
+                    text-align: center;
+                    -webkit-padding-start: 0;
+                    li {
+                        display: inline;
+                        padding: 0 3em;
+                        a {
+                            text-decoration: none;
+                            color: #B2AEAE;
+                            transition: color .3s ease-in-out;
+                        }
+                        a:hover {
+                        color: $highlight_button;
+                    }
+                    }
+                    .current {
+                        color: $highlight_button;
+                    }
+                }
+            }
+            .selector_buttons {
+                margin-top: -1.3em;
+                position: relative;
+                width: 100%;
+                height: 7em;
+            }
+            }
+            #slider_buttons {
+                @include centerer(absolute);
+                list-style: none;
+                padding: 2rem;
+                margin: 0;
+                .center_button {
+                    //                    @include h-center;
+                }
+                a {
+                    text-decoration: none;
+                }
+                .left_middle_button {}
+                li {
+                    width: 9px;
+                    height: 9px;
+                    margin: 0 .5rem;
+                    position: relative;
+                    border-radius: 100%;
+                    display: inline-block;
+                    background-color: $ltGrey_background;
+                    transition: background .3s ease-in-out;
+                    &:hover {
+                        background: $highlight_button;
+                    }
+                }
+                .current {
+                    background-color: $highlight_button;
+                }
+            }
+            .card {
+                position: absolute;
+                display: inline-block;
+                width: 45%;
+                height: 45%;
+                background-image: url(../images/maroon_5-01.jpg);
+                background-position: center center;
+                background-size: cover;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+                box-shadow: 0px 3px 57px 0px rgba(0, 0, 0, 0.2);
+                webkit-box-shadow: 0px 3px 57px 0px rgba(0, 0, 0, 0.2);
+                moz-box-shadow: 0px 3px 57px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1000;
+            }
+            .card-middle-left {
+                @extend .card;
+                z-index: 1;
+                width: 42%;
+                height: 50%;
+                left: 10%;
+                bottom: 0;
+                background-image: url(../images/john_mayer-01.jpg);
+            }
+            .card-middle-right {
+                @extend .card-middle-left;
+                left: auto;
+                right: 10%;
+                bottom: 0;
+                background-image: url(../images/linkin_park-01.jpg);
+            }
+            .card-left {
+                @extend .card;
+                z-index: 0;
+                left: 0;
+                bottom: 0;
+                height: 40%;
+                width: 40%;
+                background-image: url(../images/eminem-01.jpg);
+            }
+            .card-right {
+                @extend .card-left;
+                left: auto;
+                right: 0;
+                bottom: 0;
+                width: 30%;
+                background-image: url(../images/the_fray-01.jpg);
+            }
+            .center {
+                @include h-center;
+            }
+        }
+
+    #contact {
+        background: $ltGrey_background;
+        padding-bottom: 5rem;
+        .wrapper {
+            padding: 3rem 0 0 0;
+            h2 {
+                color: $dkGrey_one;
+                text-align: center;
+            }
+            p {
+                text-align: center;
+            }
+            a {
+                @include h-center;
+                width: 13rem;
+                height: 3.25rem;
+                display: block;
+                position: relative;
+                margin-top: 2rem;
+            }
+        }
+    }
+footer {
+    background-color: $white;
+    p {
+        text-align: center;
+        a {
+            color: $highlight_button;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #00777C;
+        }
+    }
+}
