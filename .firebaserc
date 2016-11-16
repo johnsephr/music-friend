@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "demo": "music-friend",
+    "default": "music-friend"
+  }
+}
